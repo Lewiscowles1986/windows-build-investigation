@@ -14,15 +14,18 @@ jobs:
       shell: pwsh
       run: |
         choco list --limit-output
-    - name: 'install winget'
-      shell: pwsh
-      run: |
-        choco install winget-cli
-        choco install winget.powershell -y --no-progress --params="/core /desktop"
-    - name: 'list winget packages'
-      shell: pwsh
-      run: |
-        winget list
+    # WinGet is unavailable for this
+    # Need to find how https://github.com/vedantmgoyal2009/vedantmgoyal2009/blob/main/scripts/Automation.ps1 had this working
+    # Stupid link is to main which 404's Grr, link commit sha's not branches
+    # - name: 'install winget'
+    #   shell: pwsh
+    #   run: |
+    #     choco install winget-cli
+    #     choco install winget.powershell -y --no-progress --params="/core /desktop"
+    # - name: 'list winget packages'
+    #   shell: pwsh
+    #   run: |
+    #     winget list --accept-source-agreements --accept-package-agreements
     
   win-latest:
     strategy:
@@ -41,4 +44,4 @@ jobs:
     - name: 'list winget packages'
       shell: pwsh
       run: |
-        winget list
+        winget list --accept-source-agreements --accept-package-agreements
