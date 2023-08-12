@@ -18,7 +18,7 @@ jobs:
       shell: pwsh
       run: |
         choco install winget-cli
-        choco install winget.powershell /core /desktop
+        choco install winget.powershell -y --no-progress --params="/core /desktop"
     - name: 'list winget packages'
       shell: pwsh
       run: |
@@ -37,7 +37,7 @@ jobs:
       shell: pwsh
       run: |
         choco install winget-cli
-        choco install winget.powershell /core /desktop
+        choco install winget.powershell -y --no-progress --params="/core /desktop"
     - name: 'list winget packages'
       shell: pwsh
       run: |
