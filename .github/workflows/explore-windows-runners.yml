@@ -14,6 +14,10 @@ jobs:
       shell: pwsh
       run: |
         choco list --limit-output
+    - name: 'install winget'
+      shell: pwsh
+      run: |
+        choco install winget-cli
     - name: 'list winget packages'
       shell: pwsh
       run: |
@@ -28,6 +32,10 @@ jobs:
       shell: pwsh
       run: |
         choco list --limit-output
+    - name: 'install winget'
+      shell: pwsh
+      run: |
+        choco install winget-cli
     - name: 'list winget packages'
       shell: pwsh
       run: |
