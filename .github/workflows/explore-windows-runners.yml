@@ -13,7 +13,7 @@ jobs:
     - name: 'list chocolatey packages'
       shell: pwsh
       run: |
-        choco list --localonly
+        choco list --limit-output
     - name: 'list winget packages'
       shell: pwsh
       run: |
@@ -27,7 +27,7 @@ jobs:
     - name: 'list chocolatey packages'
       shell: pwsh
       run: |
-        choco list --localonly
+        choco list --limit-output
     - name: 'list winget packages'
       shell: pwsh
       run: |
