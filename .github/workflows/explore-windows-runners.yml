@@ -1,0 +1,34 @@
+name: Investigate Windows images on GitHub
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  win-2019:
+    strategy:
+      fail-fast: false
+    runs-on: windows-2019
+    steps:
+    - name: 'list chocolatey packages'
+      shell: pwsh
+      run: |
+        choco list --localonly
+    - name: 'list winget packages'
+      shell: pwsh
+      run: |
+        winget list
+    
+  win-latest:
+    strategy:
+      fail-fast: false
+    runs-on: windows-latest # For Linux, use ubuntu-latest
+    steps:
+    - name: 'list chocolatey packages'
+      shell: pwsh
+      run: |
+        choco list --localonly
+    - name: 'list winget packages'
+      shell: pwsh
+      run: |
+        winget list
