@@ -25,7 +25,7 @@ jobs:
     # - name: 'list winget packages'
     #   shell: pwsh
     #   run: |
-    #     winget list --accept-source-agreements --accept-package-agreements
+    #     winget list --accept-source-agreements
     
   win-latest:
     strategy:
@@ -44,4 +44,4 @@ jobs:
     - name: 'list winget packages'
       shell: pwsh
       run: |
-        winget list --accept-source-agreements --accept-package-agreements
+        winget list --accept-source-agreements
